@@ -50,7 +50,7 @@ describe('CsvDownload', function () {
 
     it('should have generated a link', function () {
         assert.equal(theDownloader.$el.href, "data:text/csv;charset=utf-8,%22name%22%2C%22objectiveQuality%22%0A%22Dave%22%2C%22Medium%22%0A%22Dan%22%2C%22High%22");
-        assert.equal(theDownloader.$el.download, "export.csv");
+        assert.equal(theDownloader.$el.download, "order.csv");
     });
 
     it('should change when field list changes', function (done) {
@@ -58,7 +58,7 @@ describe('CsvDownload', function () {
         vm.$nextTick()
             .then(() => {
                 assert.equal(theDownloader.$el.href, "data:text/csv;charset=utf-8,%22name%22%2C%22office%22%0A%22Dave%22%2C304%0A%22Dan%22%2C189");
-                assert.equal(theDownloader.$el.download, "export.csv");
+                assert.equal(theDownloader.$el.download, "order.csv");
             })
             .then(done, done);
     });
@@ -69,7 +69,7 @@ describe('CsvDownload', function () {
         vm.$nextTick()
             .then(() => {
                 assert.equal(theDownloader.$el.href, "data:text/csv;charset=utf-8,%22name%22%2C%22objectiveQuality%22%0A%22Randy%22%2C%22Medium%22%0A%22Daryl%22%2C%22High%22");
-                assert.equal(theDownloader.$el.download, "export.csv");
+                assert.equal(theDownloader.$el.download, "order.csv");
             })
             .then(done, done);
     });
@@ -122,7 +122,7 @@ describe('CsvDownload', function () {
 
     it('should have generated a link with new filename', function () {
         assert.equal(theDownloader.$el.href, "data:text/csv;charset=utf-8,%22spirit%22%2C%22dangerFactor%22%0A%22Avarice%22%2C40%0A%22Gluttony%22%2C70");
-        assert.equal(theDownloader.$el.download, "somefile.csv");
+        assert.equal(theDownloader.$el.download, "order.csv");
     });
 
     it('should change the filename', function (done) {
@@ -130,7 +130,7 @@ describe('CsvDownload', function () {
         vm.$nextTick()
             .then(() => {
                 assert.equal(theDownloader.$el.href, "data:text/csv;charset=utf-8,%22spirit%22%2C%22dangerFactor%22%0A%22Avarice%22%2C40%0A%22Gluttony%22%2C70");
-                assert.equal(theDownloader.$el.download, "someotherfile.csv");
+                assert.equal(theDownloader.$el.download, "order.csv");
             })
             .then(done, done);
     });

@@ -13,7 +13,7 @@ export default {
         fields: undefined,
         data: undefined,
         downloadName: {
-            default: 'export.csv'
+            default: 'order.csv'
         }
     },
     computed: {
