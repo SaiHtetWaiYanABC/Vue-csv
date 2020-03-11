@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thatsus/vue-csv-downloader.git"
+    "url": "git+https://github.com/SaiHtetWaiYanABC/Vue-csv.git"
   },
   "contributors": [
     {
@@ -18,9 +18,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thatsus/vue-csv-downloader/issues"
+    "url": "https://github.com/SaiHtetWaiYanABC/Vue-csv/issues"
   },
-  "homepage": "https://github.com/thatsus/vue-csv-downloader#readme",
+  "homepage": "https://github.com/SaiHtetWaiYanABC/Vue-csv#readme",
   "dependencies": {
     "json2csv": "^3.0.0"
   },
