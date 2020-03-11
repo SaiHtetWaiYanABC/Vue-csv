@@ -12,13 +12,21 @@ export default {
     props: {
         fields: undefined,
         data: undefined,
+        meta: [
+            [
+                {
+                    'key': 'charset',
+                    'value': 'utf-8'
+                }
+            ]
+        ],
         downloadName: {
             default: 'order.csv'
         }
     },
     computed: {
         downloadUrl() {
-            return this.data.length > 0 ? "data:text/csv; charset=utf-8," + encodeURIComponent(json2csv({data: this.data, fields: this.fields})) : 'javascript:void(0);';
+            return this.data.length > 0 ? "data:text/csv; charset=utf-8," + encodeURIComponent(json2csv({data: this.data, fields: this.fields , meta: this.meta})) : 'javascript:void(0);';
         }
     }
 }
